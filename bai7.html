@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>viet chuong trinh cac phan tu trung nhau</title>
+</head>
+<body>
+<Script>
+    function timsotrungnhau(arr) {
+        let ar1 = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length - i; j++) {
+                if (arr[i] === arr[j]) {
+                    if (ar1.indexOf(arr[i]) === -1 ) {
+                        ar1.push(arr[i])
+                    }
+                }
+            }
+        }
+        return ar1
+
+
+        // let arr1 = [];
+        // let arr2 = [];
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (arr.indexOf(arr[i]) !== -1){
+        //         if (arr.indexOf(arr[i]) == -1 ){
+        //             arr2.push(arr[i])
+        //         }
+        //     } else {
+        //         arr1.push([arr[i]])
+        //     }
+        // }
+        // return arr2
+    }
+
+    console.log(
+        timsotrungnhau([1, 1, 2, 10, 2, 10])
+    )
+</Script>
+
+</body>
+</html>
